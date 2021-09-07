@@ -43,7 +43,7 @@ export const RegisterScreen = ({
     }
     try {
       await run(register(values));
-    } catch (e) {
+    } catch (e: any) {
       onError(e);
     }
   };
