@@ -32,9 +32,9 @@ export const TaskModal = () => {
   const startDelete = () => {
     close();
     Modal.confirm({
-      okText: "确定",
-      cancelText: "取消",
-      title: "确定Delete 任务吗",
+      okText: "Confirm",
+      cancelText: "Cancel",
+      title: "Are you sure to delete this?",
       onOk() {
         return deleteTask({ id: Number(editingTaskId) });
       },
@@ -50,27 +50,27 @@ export const TaskModal = () => {
       forceRender={true}
       onCancel={onCancel}
       onOk={onOk}
-      okText={" Confirm  "}
-      cancelText={"取消"}
+      okText={"Confirm"}
+      cancelText={"Cancel"}
       confirmLoading={editLoading}
-      title={"编辑任务"}
+      title={"Edit"}
       visible={!!editingTaskId}
     >
       <Form {...layout} initialValues={editingTask} form={form}>
         <Form.Item
-          label={"任务名"}
+          label={"Task Name"}
           name={"name"}
-          rules={[{ required: true, message: "请输入任务名" }]}
+          rules={[{ required: true, message: "Please enter the name" }]}
         >
           <Input />
         </Form.Item>
         <Form.Item label={"Task"} name={"epicId"}>
           <EpicSelect defaultOptionName={"Task"} />
         </Form.Item>
-        <Form.Item label={"经办人"} name={"processorId"}>
-          <UserSelect defaultOptionName={"经办人"} />
+        <Form.Item label={"Manager"} name={"processorId"}>
+          <UserSelect defaultOptionName={"Manager"} />
         </Form.Item>
-        <Form.Item label={"类型"} name={"typeId"}>
+        <Form.Item label={"Type"} name={"typeId"}>
           <TaskTypeSelect />
         </Form.Item>
       </Form>

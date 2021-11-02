@@ -22,21 +22,21 @@ export const SearchPanel = () => {
     <Row marginBottom={4} gap={true}>
       <Input
         style={{ width: "20rem" }}
-        placeholder={"任务名"}
+        placeholder={"Task Name"}
         value={searchParams.name}
         onChange={(evt) => setSearchParams({ name: evt.target.value })}
       />
       <UserSelect
-        defaultOptionName={"经办人"}
+        defaultOptionName={"Manager"}
         value={searchParams.processorId}
         onChange={(value) => setSearchParams({ processorId: value })}
       />
       <TaskTypeSelect
-        defaultOptionName={"类型"}
+        defaultOptionName={"Type"}
         value={searchParams.typeId}
         onChange={(value) => setSearchParams({ typeId: value })}
       />
-      <Button onClick={reset}>清除筛选器</Button>
+      <Button onClick={reset}>Clear Filter</Button>
     </Row>
   );
 };

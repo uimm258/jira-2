@@ -86,9 +86,9 @@ const More = ({ kanban }: { kanban: Kanban }) => {
   const { mutateAsync } = useDeleteKanban(useKanbansQueryKey());
   const startDelete = () => {
     Modal.confirm({
-      okText: "确定",
-      cancelText: "取消",
-      title: "确定Delete Kanban吗",
+      okText: "Confirm",
+      cancelText: "Cancel",
+      title: "Are you sure to delete this?",
       onOk() {
         return mutateAsync({ id: kanban.id });
       },

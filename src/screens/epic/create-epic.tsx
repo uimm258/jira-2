@@ -47,9 +47,9 @@ export const CreateEpic = (
               <Form.Item
                 label={"Name"}
                 name={"name"}
-                rules={[{ required: true, message: "请输入Task名" }]}
+                rules={[{ required: true, message: "Please enter a name" }]}
               >
-                <Input placeholder={"请输入TaskName"} />
+                <Input placeholder={"Please enter a name"} />
               </Form.Item>
 
               <Form.Item style={{ textAlign: "right" }}>
@@ -58,7 +58,7 @@ export const CreateEpic = (
                   type={"primary"}
                   htmlType={"submit"}
                 >
-                  提交
+                  Upload
                 </Button>
               </Form.Item>
             </Form>

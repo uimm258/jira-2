@@ -19,9 +19,9 @@ export const EpicScreen = () => {
 
   const confirmDeleteEpic = (epic: Epic) => {
     Modal.confirm({
-      title: `确定Delete Projects组：${epic.name}`,
-      content: "点击确定Delete ",
-      okText: "确定",
+      title: `Confirm to delete projects team：${epic.name}`,
+      content: "Sure to delete",
+      okText: "Confirm",
       onOk() {
         deleteEpic({ id: epic.id });
       },
@@ -31,7 +31,7 @@ export const EpicScreen = () => {
   return (
     <ScreenContainer>
       <Row between={true}>
-        <h1>{currentProject?.name}Task</h1>
+        <h1>{currentProject?.name} Task</h1>
         <Button onClick={() => setEpicCreateOpen(true)} type={"link"}>
           Create Task
         </Button>

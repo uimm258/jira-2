@@ -54,7 +54,7 @@ export const List = ({ users, ...props }: ListProps) => {
             return (
               <span>
                 {users.find((user) => user.id === project.personId)?.name ||
-                  "未知"}
+                  "Unknown"}
               </span>
             );
           },
@@ -66,7 +66,7 @@ export const List = ({ users, ...props }: ListProps) => {
               <span>
                 {project.created
                   ? dayjs(project.created).format("YYYY-MM-DD")
-                  : "无"}
+                  : "Null"}
               </span>
             );
           },
@@ -88,9 +88,9 @@ const More = ({ project }: { project: Project }) => {
   const { mutate: deleteProject } = useDeleteProject(useProjectsQueryKey());
   const confirmDeleteProject = (id: number) => {
     Modal.confirm({
-      title: "确定Delete 这个Projects吗?",
-      content: "点击确定Delete ",
-      okText: "确定",
+      title: "Are you to delete this?",
+      content: "Click delete ",
+      okText: "Confirm",
       onOk() {
         deleteProject({ id });
       },
@@ -101,7 +101,7 @@ const More = ({ project }: { project: Project }) => {
       overlay={
         <Menu>
           <Menu.Item onClick={editProject(project.id)} key={"edit"}>
-            编辑
+            Edit
           </Menu.Item>
           <Menu.Item
             onClick={() => confirmDeleteProject(project.id)}
