@@ -36,7 +36,7 @@ export const CreateEpic = (
           <Spin size={"large"} />
         ) : (
           <>
-            <h1>创建任务组</h1>
+            <h1>Create Task</h1>
             <ErrorBox error={error} />
             <Form
               form={form}
@@ -45,11 +45,11 @@ export const CreateEpic = (
               onFinish={onFinish}
             >
               <Form.Item
-                label={"名称"}
+                label={"Name"}
                 name={"name"}
-                rules={[{ required: true, message: "请输入任务组名" }]}
+                rules={[{ required: true, message: "请输入Task名" }]}
               >
-                <Input placeholder={"请输入任务组名称"} />
+                <Input placeholder={"请输入TaskName"} />
               </Form.Item>
 
               <Form.Item style={{ textAlign: "right" }}>

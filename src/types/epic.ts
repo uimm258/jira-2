@@ -2,8 +2,8 @@ export interface Epic {
   id: number;
   name: string;
   projectId: number;
-  // 开始时间
+  // Start Time
   start: number;
-  // 结束时间
+  // End Time
   end: number;
 }

@@ -24,7 +24,7 @@ export const CreateTask = ({ kanbanId }: { kanbanId: number }) => {
   }, [inputMode]);
 
   if (!inputMode) {
-    return <div onClick={toggle}>+创建事务</div>;
+    return <div onClick={toggle}>+Create 事务</div>;
   }
 
   return (

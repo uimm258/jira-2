@@ -1,9 +1,9 @@
 /**
  * 在本地对排序进行乐观更新
- * @param fromId 要排序的项目的id
+ * @param fromId 要排序的Projects的id
  * @param type 'before' | 'after'
  * @param referenceId 参照id
- * @param list 要排序的列表, 比如tasks, kanbans
+ * @param list 要排序的 List, 比如tasks, kanbans
  */
 export const reorder = ({
   fromId,
@@ -17,7 +17,7 @@ export const reorder = ({
   referenceId: number;
 }) => {
   const copiedList = [...list];
-  // 找到fromId对应项目的下标
+  // 找到fromId对应Projects的下标
   const movingItemIndex = copiedList.findIndex((item) => item.id === fromId);
   if (!referenceId) {
     return insertAfter([...copiedList], movingItemIndex, copiedList.length - 1);

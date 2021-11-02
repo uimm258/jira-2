@@ -88,7 +88,7 @@ const More = ({ kanban }: { kanban: Kanban }) => {
     Modal.confirm({
       okText: "确定",
       cancelText: "取消",
-      title: "确定删除看板吗",
+      title: "确定Delete Kanban吗",
       onOk() {
         return mutateAsync({ id: kanban.id });
       },
@@ -98,7 +98,7 @@ const More = ({ kanban }: { kanban: Kanban }) => {
     <Menu>
       <Menu.Item>
         <Button type={"link"} onClick={startDelete}>
-          删除
+          Delete
         </Button>
       </Menu.Item>
     </Menu>

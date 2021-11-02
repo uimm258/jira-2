@@ -19,8 +19,8 @@ export const EpicScreen = () => {
 
   const confirmDeleteEpic = (epic: Epic) => {
     Modal.confirm({
-      title: `确定删除项目组：${epic.name}`,
-      content: "点击确定删除",
+      title: `确定Delete Projects组：${epic.name}`,
+      content: "点击确定Delete ",
       okText: "确定",
       onOk() {
         deleteEpic({ id: epic.id });
@@ -31,9 +31,9 @@ export const EpicScreen = () => {
   return (
     <ScreenContainer>
       <Row between={true}>
-        <h1>{currentProject?.name}任务组</h1>
+        <h1>{currentProject?.name}Task</h1>
         <Button onClick={() => setEpicCreateOpen(true)} type={"link"}>
-          创建任务组
+          Create Task
         </Button>
       </Row>
       <List
@@ -47,14 +47,16 @@ export const EpicScreen = () => {
                 <Row between={true}>
                   <span>{epic.name}</span>
                   <Button onClick={() => confirmDeleteEpic(epic)} type={"link"}>
-                    删除
+                    Delete
                   </Button>
                 </Row>
               }
               description={
                 <div>
-                  <div>开始时间：{dayjs(epic.start).format("YYYY-MM-DD")}</div>
-                  <div>结束时间：{dayjs(epic.end).format("YYYY-MM-DD")}</div>
+                  <div>
+                    Start Time：{dayjs(epic.start).format("YYYY-MM-DD")}
+                  </div>
+                  <div>End Time：{dayjs(epic.end).format("YYYY-MM-DD")}</div>
                 </div>
               }
             />

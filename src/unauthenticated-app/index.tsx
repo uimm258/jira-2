@@ -13,14 +13,14 @@ export default function UnauthenticatedApp() {
   const [isRegister, setIsRegister] = useState(false);
   const [error, setError] = useState<Error | null>(null);
 
-  useDocumentTitle("请登录注册以继续");
+  useDocumentTitle("Please register here");
 
   return (
     <Container>
       <Header />
       <Background />
       <ShadowCard>
-        <Title>{isRegister ? "请注册" : "请登录"}</Title>
+        <Title>{isRegister ? "Register" : "Login"}</Title>
         <ErrorBox error={error} />
         {isRegister ? (
           <RegisterScreen onError={setError} />
@@ -29,7 +29,9 @@ export default function UnauthenticatedApp() {
         )}
         <Divider />
         <Button type={"link"} onClick={() => setIsRegister(!isRegister)}>
-          {isRegister ? "已经有账号了？直接登录" : "没有账号？注册新账号"}
+          {isRegister
+            ? "Already have account? Login here"
+            : "No account？Sign up here"}
         </Button>
       </ShadowCard>
     </Container>

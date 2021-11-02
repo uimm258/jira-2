@@ -1,0 +1,386 @@
+diff --git a/node_modules/jira-dev-tool/dist/index.js b/node_modules/jira-dev-tool/dist/index.js
+index 9f7630a..8202236 100644
+--- a/node_modules/jira-dev-tool/dist/index.js
++++ b/node_modules/jira-dev-tool/dist/index.js
+@@ -353,53 +353,83 @@ var taskTypes = [{
+   name: "bug"
+ }];
+ var tags = [{
+-  name: "初始"
+-}, {
+-  name: "中期"
+-}, {
+-  name: "结项"
++  name: "Init",
++},
++{
++  name: "Mid",
++},
++{
++  name: "End",
+ }];
+ var epics = [{
+-  name: "骑手物料表单开发",
++  name: "Task1",
+   start: new Date("2020-12-10").getTime(),
+   end: new Date("2021-01-11").getTime()
+-}, {
+-  name: "骑手地图开发",
++}, 
++{
++  name: "Task2",
+   start: new Date("2021-01-12").getTime(),
+   end: new Date("2021-02-14").getTime()
+-}, {
+-  name: "骑手地图开发",
++}, 
++{
++  name: "Task3",
+   start: new Date("2021-01-12").getTime(),
+   end: new Date("2021-02-14").getTime()
+ }];
+ var kanbans = [{
+-  name: "待完成"
+-}, {
+-  name: "开发中"
+-}, {
+-  name: "已完成"
++  name: "To Do"
++}, 
++{
++  name: "In Progress"
++}, 
++{
++  name: "Done"
+ }];
+ var users$1 = [{
+-  name: "高修文",
+-  organization: "外卖组"
+-}, {
+-  name: "熊天成",
+-  organization: "外卖组"
+-}, {
+-  name: "郑华",
+-  organization: "总部组"
+-}, {
+-  name: "王文静",
+-  organization: "中台组"
++  name: "Patrick",
++  organization: "HR/Acc"
++}, 
++{
++  name: "Adam",
++  organization: "HR/Acc"
++}, 
++{
++  name: "JR",
++  organization: "CS"
++}, 
++{
++  name: "David",
++  organization: "IT"
+ }];
+ var projects = [{
+-  name: "快递管理",
++  name: "HR",
+   personId: 1,
+-  organization: "快递组",
++  organization: "HR/Acc Team",
+   created: 1604989757139
++}, {
++  name: "Sales",
++  personId: 2,
++  organization: "Sales Team",
++  created: 1604989757139,
++  pin: true
++}, {
++  name: "Accountant",
++  personId: 2,
++  organization: "HR/Acc Team",
++  created: 1546300800000
++}, {
++  name: "CS",
++  personId: 3,
++  organization: "Customer Service Team",
++  created: 1604980000011
++}, {
++  name: "WH",
++  personId: 4,
++  organization: "Warehouse Team",
++  created: 1546900800000
+ }];
+ var tasks = [{
+-  name: "管理注册界面开发",
++  name: "Task1",
+   tags: [1, 2],
+   reporterId: 1,
+   processorId: 2,
+@@ -407,9 +437,10 @@ var tasks = [{
+   kanbanId: 1,
+   favorite: true,
+   typeId: 1,
+-  note: "请尽快完成"
+-}, {
+-  name: "管理 Login 界面开发",
++  note: "This is the first important note"
++}, 
++{
++  name: "Task2",
+   tags: [2],
+   reporterId: 1,
+   processorId: 2,
+@@ -417,9 +448,10 @@ var tasks = [{
+   kanbanId: 1,
+   favorite: true,
+   typeId: 1,
+-  note: "请使用JWT完成"
+-}, {
+-  name: "单元测试",
++  note: "This is the second important note"
++}, 
++{
++  name: "Task3",
+   tags: [1],
+   reporterId: 1,
+   processorId: 2,
+@@ -428,8 +460,9 @@ var tasks = [{
+   favorite: true,
+   typeId: 1,
+   note: ""
+-}, {
+-  name: "性能优化",
++}, 
++{
++  name: "Task4",
+   tags: [1],
+   reporterId: 1,
+   processorId: 2,
+@@ -438,8 +471,9 @@ var tasks = [{
+   favorite: true,
+   typeId: 1,
+   note: ""
+-}, {
+-  name: "权限管理界面开发",
++}, 
++{
++  name: "Task5",
+   tags: [1],
+   reporterId: 1,
+   processorId: 2,
+@@ -448,8 +482,9 @@ var tasks = [{
+   favorite: true,
+   typeId: 1,
+   note: ""
+-}, {
+-  name: "UI开发",
++}, 
++{
++  name: "Task5",
+   tags: [1],
+   reporterId: 1,
+   processorId: 2,
+@@ -458,8 +493,9 @@ var tasks = [{
+   favorite: true,
+   typeId: 1,
+   note: ""
+-}, {
+-  name: "自测",
++}, 
++{
++  name: "Task6",
+   tags: [1],
+   reporterId: 1,
+   processorId: 2,
+diff --git a/node_modules/jira-dev-tool/dist/index.modern.js b/node_modules/jira-dev-tool/dist/index.modern.js
+index 85f2e08..ce2e1f7 100644
+--- a/node_modules/jira-dev-tool/dist/index.modern.js
++++ b/node_modules/jira-dev-tool/dist/index.modern.js
+@@ -350,53 +350,83 @@ var taskTypes = [{
+   name: "bug"
+ }];
+ var tags = [{
+-  name: "初始"
+-}, {
+-  name: "中期"
+-}, {
+-  name: "结项"
++  name: "Init",
++},
++{
++  name: "Mid",
++},
++{
++  name: "End",
+ }];
+ var epics = [{
+-  name: "骑手物料表单开发",
++  name: "Task1",
+   start: new Date("2020-12-10").getTime(),
+   end: new Date("2021-01-11").getTime()
+-}, {
+-  name: "骑手地图开发",
++}, 
++{
++  name: "Task2",
+   start: new Date("2021-01-12").getTime(),
+   end: new Date("2021-02-14").getTime()
+-}, {
+-  name: "骑手地图开发",
++}, 
++{
++  name: "Task3",
+   start: new Date("2021-01-12").getTime(),
+   end: new Date("2021-02-14").getTime()
+ }];
+ var kanbans = [{
+-  name: "待完成"
+-}, {
+-  name: "开发中"
+-}, {
+-  name: "已完成"
++  name: "To Do"
++}, 
++{
++  name: "In Progress"
++}, 
++{
++  name: "Done"
+ }];
+ var users$1 = [{
+-  name: "高修文",
+-  organization: "外卖组"
+-}, {
+-  name: "熊天成",
+-  organization: "外卖组"
+-}, {
+-  name: "郑华",
+-  organization: "总部组"
+-}, {
+-  name: "王文静",
+-  organization: "中台组"
++  name: "Patrick",
++  organization: "HR/Acc"
++}, 
++{
++  name: "Adam",
++  organization: "HR/Acc"
++}, 
++{
++  name: "JR",
++  organization: "CS"
++}, 
++{
++  name: "David",
++  organization: "IT"
+ }];
+ var projects = [{
+-  name: "快递管理",
++  name: "HR",
+   personId: 1,
+-  organization: "快递组",
++  organization: "HR/Acc Team",
+   created: 1604989757139
++}, {
++  name: "Sales",
++  personId: 2,
++  organization: "Sales Team",
++  created: 1604989757139,
++  pin: true
++}, {
++  name: "Accountant",
++  personId: 2,
++  organization: "HR/Acc Team",
++  created: 1546300800000
++}, {
++  name: "CS",
++  personId: 3,
++  organization: "Customer Service Team",
++  created: 1604980000011
++}, {
++  name: "WH",
++  personId: 4,
++  organization: "Warehouse Team",
++  created: 1546900800000
+ }];
+ var tasks = [{
+-  name: "管理注册界面开发",
++  name: "Task1",
+   tags: [1, 2],
+   reporterId: 1,
+   processorId: 2,
+@@ -404,9 +434,10 @@ var tasks = [{
+   kanbanId: 1,
+   favorite: true,
+   typeId: 1,
+-  note: "请尽快完成"
+-}, {
+-  name: "管理 Login 界面开发",
++  note: "This is the first important note"
++}, 
++{
++  name: "Task2",
+   tags: [2],
+   reporterId: 1,
+   processorId: 2,
+@@ -414,9 +445,10 @@ var tasks = [{
+   kanbanId: 1,
+   favorite: true,
+   typeId: 1,
+-  note: "请使用JWT完成"
+-}, {
+-  name: "单元测试",
++  note: "This is the second important note"
++}, 
++{
++  name: "Task3",
+   tags: [1],
+   reporterId: 1,
+   processorId: 2,
+@@ -425,8 +457,9 @@ var tasks = [{
+   favorite: true,
+   typeId: 1,
+   note: ""
+-}, {
+-  name: "性能优化",
++}, 
++{
++  name: "Task4",
+   tags: [1],
+   reporterId: 1,
+   processorId: 2,
+@@ -435,8 +468,9 @@ var tasks = [{
+   favorite: true,
+   typeId: 1,
+   note: ""
+-}, {
+-  name: "权限管理界面开发",
++}, 
++{
++  name: "Task5",
+   tags: [1],
+   reporterId: 1,
+   processorId: 2,
+@@ -445,8 +479,9 @@ var tasks = [{
+   favorite: true,
+   typeId: 1,
+   note: ""
+-}, {
+-  name: "UI开发",
++}, 
++{
++  name: "Task5",
+   tags: [1],
+   reporterId: 1,
+   processorId: 2,
+@@ -455,8 +490,9 @@ var tasks = [{
+   favorite: true,
+   typeId: 1,
+   note: ""
+-}, {
+-  name: "自测",
++}, 
++{
++  name: "Task6",
+   tags: [1],
+   reporterId: 1,
+   processorId: 2,

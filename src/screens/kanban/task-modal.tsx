@@ -34,7 +34,7 @@ export const TaskModal = () => {
     Modal.confirm({
       okText: "确定",
       cancelText: "取消",
-      title: "确定删除任务吗",
+      title: "确定Delete 任务吗",
       onOk() {
         return deleteTask({ id: Number(editingTaskId) });
       },
@@ -50,7 +50,7 @@ export const TaskModal = () => {
       forceRender={true}
       onCancel={onCancel}
       onOk={onOk}
-      okText={"确认"}
+      okText={" Confirm  "}
       cancelText={"取消"}
       confirmLoading={editLoading}
       title={"编辑任务"}
@@ -64,8 +64,8 @@ export const TaskModal = () => {
         >
           <Input />
         </Form.Item>
-        <Form.Item label={"任务组"} name={"epicId"}>
-          <EpicSelect defaultOptionName={"任务组"} />
+        <Form.Item label={"Task"} name={"epicId"}>
+          <EpicSelect defaultOptionName={"Task"} />
         </Form.Item>
         <Form.Item label={"经办人"} name={"processorId"}>
           <UserSelect defaultOptionName={"经办人"} />
@@ -80,7 +80,7 @@ export const TaskModal = () => {
           style={{ fontSize: "14px" }}
           size={"small"}
         >
-          删除
+          Delete
         </Button>
       </div>
     </Modal>

@@ -44,19 +44,19 @@ export const LoginScreen = ({
     <Form onFinish={handleSubmit}>
       <Form.Item
         name={"username"}
-        rules={[{ required: true, message: "请输入用户名" }]}
+        rules={[{ required: true, message: "Please enter username" }]}
       >
-        <Input placeholder={"用户名"} type="text" id={"username"} />
+        <Input placeholder={"Username"} type="text" id={"username"} />
       </Form.Item>
       <Form.Item
         name={"password"}
-        rules={[{ required: true, message: "请输入密码" }]}
+        rules={[{ required: true, message: "Please enter password" }]}
       >
-        <Input placeholder={"密码"} type="password" id={"password"} />
+        <Input placeholder={"Password"} type="password" id={"password"} />
       </Form.Item>
       <Form.Item>
         <LongButton loading={isLoading} htmlType={"submit"} type={"primary"}>
-          登录
+          Login
         </LongButton>
       </Form.Item>
     </Form>

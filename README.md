@@ -1,4 +1,4 @@
-# Mock Jira --- A Enterprise Task Management Tool
+# Mock Jira --- A Enterprise Task Tool
 
 ## What is Jira and why Jira?
 

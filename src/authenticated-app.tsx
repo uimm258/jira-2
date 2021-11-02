@@ -67,7 +67,7 @@ const User = () => {
         <Menu>
           <Menu.Item key={"logout"}>
             <Button onClick={logout} type={"link"}>
-              登出
+              Logout
             </Button>
           </Menu.Item>
         </Menu>

@@ -38,7 +38,7 @@ export const RegisterScreen = ({
     cpassword: string;
   }) => {
     if (cpassword !== values.password) {
-      onError(new Error("请确认两次输入的密码相同"));
+      onError(new Error("Please enter same password"));
       return;
     }
     try {
@@ -52,25 +52,29 @@ export const RegisterScreen = ({
     <Form onFinish={handleSubmit}>
       <Form.Item
         name={"username"}
-        rules={[{ required: true, message: "请输入用户名" }]}
+        rules={[{ required: true, message: "Please enter username" }]}
       >
-        <Input placeholder={"用户名"} type="text" id={"username"} />
+        <Input placeholder={"Username"} type="text" id={"username"} />
       </Form.Item>
       <Form.Item
         name={"password"}
-        rules={[{ required: true, message: "请输入密码" }]}
+        rules={[{ required: true, message: "Please enter password" }]}
       >
-        <Input placeholder={"密码"} type="password" id={"password"} />
+        <Input placeholder={"Password"} type="password" id={"password"} />
       </Form.Item>
       <Form.Item
         name={"cpassword"}
-        rules={[{ required: true, message: "请确认密码" }]}
+        rules={[{ required: true, message: "Please confirm password" }]}
       >
-        <Input placeholder={"确认密码"} type="password" id={"cpassword"} />
+        <Input
+          placeholder={"Confirm Password"}
+          type="password"
+          id={"cpassword"}
+        />
       </Form.Item>
       <Form.Item>
         <LongButton loading={isLoading} htmlType={"submit"} type={"primary"}>
-          注册
+          Register
         </LongButton>
       </Form.Item>
     </Form>

@@ -8,7 +8,7 @@ export const UserPopover = () => {
 
   const content = (
     <ContentContainer>
-      <Typography.Text type={"secondary"}>组员列表</Typography.Text>
+      <Typography.Text type={"secondary"}>Team Member List</Typography.Text>
       <List>
         {users?.map((user) => (
           <List.Item key={user.id}>
@@ -26,7 +26,7 @@ export const UserPopover = () => {
       placement={"bottom"}
       content={content}
     >
-      <span>组员</span>
+      <span>Team Member</span>
     </Popover>
   );
 };

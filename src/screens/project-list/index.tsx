@@ -24,7 +24,7 @@ import { Profiler } from "components/profiler";
 // 使用 JS 的同学，大部分的错误都是在 runtime(运行时) 的时候发现的
 // 我们希望，在静态代码中，就能找到其中的一些错误 -> 强类型
 export const ProjectListScreen = () => {
-  useDocumentTitle("项目列表", false);
+  useDocumentTitle("Projects List", false);
 
   const { open } = useProjectModal();
 
@@ -33,12 +33,12 @@ export const ProjectListScreen = () => {
   const { data: users } = useUsers();
 
   return (
-    <Profiler id={"项目列表"}>
+    <Profiler id={"Projects List"}>
       <ScreenContainer>
         <Row marginBottom={2} between={true}>
-          <h1>项目列表</h1>
+          <h1>Projects List</h1>
           <ButtonNoPadding onClick={open} type={"link"}>
-            创建项目
+            Create Projects
           </ButtonNoPadding>
         </Row>
         <SearchPanel users={users || []} param={param} setParam={setParam} />

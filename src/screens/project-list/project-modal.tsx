@@ -10,17 +10,15 @@ import { ErrorBox } from "components/lib";
 import styled from "@emotion/styled";
 
 export const ProjectModal = () => {
-  const {
-    projectModalOpen,
-    close,
-    editingProject,
-    isLoading,
-  } = useProjectModal();
+  const { projectModalOpen, close, editingProject, isLoading } =
+    useProjectModal();
   const useMutateProject = editingProject ? useEditProject : useAddProject;
 
-  const { mutateAsync, error, isLoading: mutateLoading } = useMutateProject(
-    useProjectsQueryKey()
-  );
+  const {
+    mutateAsync,
+    error,
+    isLoading: mutateLoading,
+  } = useMutateProject(useProjectsQueryKey());
   const [form] = Form.useForm();
   const onFinish = (values: any) => {
     mutateAsync({ ...editingProject, ...values }).then(() => {
@@ -33,7 +31,7 @@ export const ProjectModal = () => {
     close();
   };
 
-  const title = editingProject ? "编辑项目" : "创建项目";
+  const title = editingProject ? "编辑Projects" : "Create Projects";
 
   useEffect(() => {
     form.setFieldsValue(editingProject);
@@ -60,23 +58,23 @@ export const ProjectModal = () => {
               onFinish={onFinish}
             >
               <Form.Item
-                label={"名称"}
+                label={"Name"}
                 name={"name"}
-                rules={[{ required: true, message: "请输入项目名" }]}
+                rules={[{ required: true, message: "请输入Projects名" }]}
               >
-                <Input placeholder={"请输入项目名称"} />
+                <Input placeholder={"请输入ProjectsName"} />
               </Form.Item>
 
               <Form.Item
-                label={"部门"}
+                label={"Department"}
                 name={"organization"}
-                rules={[{ required: true, message: "请输入部门名" }]}
+                rules={[{ required: true, message: "请输入Department名" }]}
               >
-                <Input placeholder={"请输入部门名"} />
+                <Input placeholder={"请输入Department名"} />
               </Form.Item>
 
-              <Form.Item label={"负责人"} name={"personId"}>
-                <UserSelect defaultOptionName={"负责人"} />
+              <Form.Item label={"Manager"} name={"personId"}>
+                <UserSelect defaultOptionName={"Manager"} />
               </Form.Item>
 
               <Form.Item style={{ textAlign: "right" }}>

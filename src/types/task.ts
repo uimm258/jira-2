@@ -4,7 +4,7 @@ export interface Task {
   // 经办人
   processorId: number;
   projectId: number;
-  // 任务组
+  // Task
   epicId: number;
   kanbanId: number;
   // bug or task

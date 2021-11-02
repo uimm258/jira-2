@@ -44,13 +44,13 @@ const waitTable = () =>
   waitFor(() => expect(screen.getByText("骑手管理")).toBeInTheDocument(), {
     timeout: 3000,
   });
-test("项目列表展示正常", async () => {
+test("Projects List展示正常", async () => {
   renderScreen(<ProjectListScreen />, { route: "/projects" });
   await waitTable();
   expect(screen.getAllByRole("row").length).toBe(fakeData.projects.length + 1);
 });
 
-test("搜索项目", async () => {
+test("搜索Projects", async () => {
   renderScreen(<ProjectListScreen />, { route: "/projects?name=骑手" });
   await waitTable();
   expect(screen.getAllByRole("row").length).toBe(2);

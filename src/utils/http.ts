@@ -36,7 +36,7 @@ export const http = async (
       if (response.status === 401) {
         await auth.logout();
         window.location.reload();
-        return Promise.reject({ message: "请重新登录" });
+        return Promise.reject({ message: "请重新 Login " });
       }
       const data = await response.json();
       if (response.ok) {

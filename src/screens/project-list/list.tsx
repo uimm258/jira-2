@@ -38,18 +38,18 @@ export const List = ({ users, ...props }: ListProps) => {
           },
         },
         {
-          title: "名称",
+          title: "Name",
           sorter: (a, b) => a.name.localeCompare(b.name),
           render(value, project) {
             return <Link to={String(project.id)}>{project.name}</Link>;
           },
         },
         {
-          title: "部门",
+          title: "Department",
           dataIndex: "organization",
         },
         {
-          title: "负责人",
+          title: "Manager",
           render(value, project) {
             return (
               <span>
@@ -60,7 +60,7 @@ export const List = ({ users, ...props }: ListProps) => {
           },
         },
         {
-          title: "创建时间",
+          title: "Create Time",
           render(value, project) {
             return (
               <span>
@@ -88,8 +88,8 @@ const More = ({ project }: { project: Project }) => {
   const { mutate: deleteProject } = useDeleteProject(useProjectsQueryKey());
   const confirmDeleteProject = (id: number) => {
     Modal.confirm({
-      title: "确定删除这个项目吗?",
-      content: "点击确定删除",
+      title: "确定Delete 这个Projects吗?",
+      content: "点击确定Delete ",
       okText: "确定",
       onOk() {
         deleteProject({ id });
@@ -107,7 +107,7 @@ const More = ({ project }: { project: Project }) => {
             onClick={() => confirmDeleteProject(project.id)}
             key={"delete"}
           >
-            删除
+            Delete
           </Menu.Item>
         </Menu>
       }
