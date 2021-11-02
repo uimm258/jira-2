@@ -1,9 +1,26 @@
-# 2021 必修：React + React Hook + TS 最佳实践仿 Jira 企业级项目
+# Mock Jira --- A Enterprise Task Management Tool
 
-Hi，同学们好，感谢大家的信任购买这个课程。查看课程对应代码请 checkout 到对应的 commit
+## What is Jira and why Jira?
 
-这里是配套课件的链接：[点击我查看配套课件](https://www.notion.so/React-491ad0643476437cafde50bee4dde6ed)
+The purpose of this project is to build a mock Jira tool by using React.JS.
 
+- ### What is Jira?
 
+  Jira is a product that helps various teams manage their work.
 
+  "Jira Software is built for every member of your software team to plan, track, and release great software." -- Atlassian.com
 
+  [More Here](https://www.atlassian.com/software/jira)
+
+- ### What are the main functionalities?
+
+  - JWT login/register
+  - Main page
+  - Display project list
+  - Display project details
+  - Add/Edit/Delete projects and project details
+  - Search for items
+  - Developer Tool
+
+- ### Technologies
+  React, React hooks, Typescript, React query, React router, CSS in JS, Redux
